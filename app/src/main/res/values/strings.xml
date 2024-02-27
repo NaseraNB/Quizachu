@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Quizachu</string>
+
+    <!-- Variables -->
+    <string name="botoLogin">Login</string> <!-- Boton de login -->
+    <string name="botoRegistre">Registre</string> <!-- Boton de registro -->
+
+    <string name="correo">E-mail</string> <!-- Correo  -->
+    <string name="nombre">Nom</string> <!-- Nombre -->
+    <string name="pass">Password</string> <!-- Contraseña -->
+    <string name="fecha">Data</string> <!-- Fecha -->
+    <string name="Registrar">REGISTRAR</string> <!-- Registro -->
+
+    <string name="correoLogin">E-mail</string>  <!-- Correo  -->
+    <string name="passLogin">Password</string> <!-- Contraseña -->
+    <string name="BtnLogin">ENTRAR</string> <!-- Boton de entrada -->
+
+    <string name="TancarSessio">Tancar Sessió</string>
+
+    <string name="miPuntuaciotxt">Puntuació</string>
+    <string name="puntuacio"> -- </string>
+    <string name="uid"> -- </string>
+    <string name="correo_"> -- </string>
+    <string name="nom"> -- </string>
+    <string name="MenuTxt">MENÚ</string>
+    <string name="jugarBtn">Jugar</string>
+    <string name="PuntuacionsBtn">Puntuacions</string>
+    <string name="CreditsBtn">Crèdits</string>
+
 </resources>

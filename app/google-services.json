@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "979575903420",
+    "project_id": "quizachu",
+    "storage_bucket": "quizachu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979575903420:android:05facaa0c77064671e2cb9",
+        "android_client_info": {
+          "package_name": "com.example.quizachu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGC8M1K0JoBm-oQluCU74fYzAGuM5ClFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
