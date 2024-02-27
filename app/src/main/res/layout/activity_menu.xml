@@ -69,6 +69,8 @@
             android:layout_height="wrap_content"
             android:text="@string/jugarBtn"
             android:layout_marginTop="10dp"
+            android:background="@drawable/botopropio"
+            android:textColor="@color/black"
             />
 
         <!-- BOTO DE puntuacions -->
@@ -78,6 +80,8 @@
             android:layout_height="wrap_content"
             android:text="@string/PuntuacionsBtn"
             android:layout_marginTop="10dp"
+            android:background="@drawable/botopropio"
+            android:textColor="@color/black"
             />
 
         <!-- BOTO DE Credits -->
@@ -87,6 +91,8 @@
             android:layout_height="wrap_content"
             android:text="@string/CreditsBtn"
             android:layout_marginTop="10dp"
+            android:background="@drawable/botopropio"
+            android:textColor="@color/black"
             />
 
         <!-- BOTO DE Tancar sessió -->
@@ -96,6 +102,8 @@
             android:layout_height="wrap_content"
             android:text="@string/TancarSessio"
             android:layout_marginTop="10dp"
+            android:background="@drawable/botopropio"
+            android:textColor="@color/black"
             />
     </LinearLayout>
 
