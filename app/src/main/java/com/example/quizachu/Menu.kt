@@ -14,15 +14,31 @@ class Menu : AppCompatActivity() {
     lateinit var auth: FirebaseAuth
     var user:FirebaseUser? = null;
     lateinit var tancarSessio: Button
+    lateinit var CreditsBtn: Button
+    lateinit var PuntuacionsBtn: Button
+    lateinit var jugarBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
         tancarSessio =findViewById<Button>(R.id.tancarSessio)
+        CreditsBtn =findViewById<Button>(R.id.CreditsBtn)
+        PuntuacionsBtn =findViewById<Button>(R.id.PuntuacionsBtn)
+        jugarBtn =findViewById<Button>(R.id.jugarBtn)
 
         tancarSessio.setOnClickListener(){
             tancalaSessio()
+        }
+
+        CreditsBtn.setOnClickListener(){
+            Toast.makeText(this,"Credits", Toast.LENGTH_SHORT).show()
+        }
+        PuntuacionsBtn.setOnClickListener(){
+            Toast.makeText(this,"Puntuacions", Toast.LENGTH_SHORT).show()
+        }
+        jugarBtn.setOnClickListener(){
+            Toast.makeText(this,"JUGAR", Toast.LENGTH_SHORT).show()
         }
 
         auth= FirebaseAuth.getInstance()
