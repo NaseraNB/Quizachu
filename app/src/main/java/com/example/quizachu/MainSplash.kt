@@ -23,9 +23,19 @@ class MainSplash : AppCompatActivity() {
 
 
         // Nos permite añadir un gif
-        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        //this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        //val logo = findViewById<ImageView>(R.id.logoImage)
+        //Glide.with(this).load(R.drawable.pokemon).override(2100, 4100).centerCrop().into(logo)
+
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         val logo = findViewById<ImageView>(R.id.logoImage)
-        Glide.with(this).load(R.drawable.pokemon).override(2100, 4100).centerCrop().into(logo)
+        Glide.with(this)
+            .asGif() // Indica a Glide que se trata de un GIF
+            .load(R.drawable.pokemon)
+            .override(1430, 2440) // Ajusta la resolución del GIF según las dimensiones de tu ImageView
+            .centerCrop()
+            .into(logo)
+
 
 
         // Configuració del MediaPlayer amb el fitxer d'àudio

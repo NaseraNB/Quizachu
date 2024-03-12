@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#58FA58"
+    android:background="#ffffff"
     tools:context=".Menu">
 
     <LinearLayout
@@ -14,7 +14,6 @@
         android:orientation="vertical"
         android:padding="30dp">
 
-        <!-- Text La meva puntuació -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +22,6 @@
             android:textSize="30sp"
             android:gravity="center"/>
 
-        <!-- contingut puntuació -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,14 +29,12 @@
             android:text="@string/puntuacio"
             android:gravity="center"/>
 
-        <!-- Imatge alien -->
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="180dp"
-            android:layout_height="180dp"
             android:id="@+id/alienimagen"
+            android:layout_width="202dp"
+            android:layout_height="214dp"
             android:src="@drawable/l" />
 
-        <!-- uid -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,7 +42,6 @@
             android:text="@string/uid"
             android:gravity="center"/>
 
-        <!-- correu -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +49,6 @@
             android:text="@string/correo"
             android:gravity="center"/>
 
-        <!-- nom -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,7 +56,6 @@
             android:text="@string/nom"
             android:gravity="center"/>
 
-        <!-- BOTO DE jugar -->
         <Button
             android:id="@+id/jugarBtn"
             android:layout_width="match_parent"
@@ -73,7 +66,6 @@
             android:textColor="@color/black"
             />
 
-        <!-- BOTO DE puntuacions -->
         <Button
             android:id="@+id/PuntuacionsBtn"
             android:layout_width="match_parent"
@@ -84,7 +76,6 @@
             android:textColor="@color/black"
             />
 
-        <!-- BOTO DE Credits -->
         <Button
             android:id="@+id/CreditsBtn"
             android:layout_width="match_parent"
@@ -95,7 +86,6 @@
             android:textColor="@color/black"
             />
 
-        <!-- BOTO DE Tancar sessió -->
         <Button
             android:id="@+id/tancarSessio"
             android:layout_width="match_parent"
@@ -106,5 +96,6 @@
             android:textColor="@color/black"
             />
     </LinearLayout>
+
 
 </ScrollView>
