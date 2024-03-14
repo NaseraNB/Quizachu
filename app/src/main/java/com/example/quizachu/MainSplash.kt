@@ -31,8 +31,8 @@ class MainSplash : AppCompatActivity() {
         val logo = findViewById<ImageView>(R.id.logoImage)
         Glide.with(this)
             .asGif() // Indica a Glide que se trata de un GIF
-            .load(R.drawable.pokemon)
-            .override(1430, 2440) // Ajusta la resolución del GIF según las dimensiones de tu ImageView
+            .load(R.drawable.pokemon_spl)
+            .override(1350, 1100) // Ajusta la resolución del GIF según las dimensiones de tu ImageView
             .centerCrop()
             .into(logo)
 
