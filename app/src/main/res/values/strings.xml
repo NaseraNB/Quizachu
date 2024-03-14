@@ -27,4 +27,10 @@
     <string name="PuntuacionsBtn">Puntuacions</string>
     <string name="CreditsBtn">Crèdits</string>
 
+
+    <!--Game variables-->
+    <string name="imgDesc">Pokémon image</string>
+    <string name="btSortir">Sortir</string>
+    <string name="pokeBt" />
+
 </resources>
