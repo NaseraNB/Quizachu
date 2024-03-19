@@ -11,8 +11,8 @@
     <string name="fecha">Data</string> <!-- Fecha -->
     <string name="Registrar">REGISTRAR</string> <!-- Registro -->
 
-    <string name="correoLogin">E-mail</string>  <!-- Correo  -->
-    <string name="passLogin">Password</string> <!-- Contraseña -->
+    <string name="correoLogin">Entra el teu email</string>  <!-- Correo  -->
+    <string name="passLogin">Entra la teva contrasenya</string> <!-- Contraseña -->
     <string name="BtnLogin">ENTRAR</string> <!-- Boton de entrada -->
 
     <string name="TancarSessio">Tancar Sessió</string>
@@ -26,5 +26,7 @@
     <string name="jugarBtn">Jugar</string>
     <string name="PuntuacionsBtn">Puntuacions</string>
     <string name="CreditsBtn">Crèdits</string>
+
+    <string name="prefs_file">https://quizachu-default-rtdb.europe-west1.firebasedatabase.app</string>
 
 </resources>

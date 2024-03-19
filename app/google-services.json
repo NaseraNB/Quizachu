@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "979575903420",
+    "firebase_url": "https://quizachu-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "quizachu",
     "storage_bucket": "quizachu.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.quizachu"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "979575903420-ubdnl7sleod0pmthn0115u9kq47u77tc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quizachu",
+            "certificate_hash": "432cfc2c9e302f1f11277e8bdbc155f60e2f9962"
+          }
+        },
+        {
+          "client_id": "979575903420-2pff8de91g7vno5mghsfavns5n5jlnrs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAGC8M1K0JoBm-oQluCU74fYzAGuM5ClFU"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979575903420-2pff8de91g7vno5mghsfavns5n5jlnrs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
