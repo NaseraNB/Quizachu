@@ -9,13 +9,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="447dp"
+        android:layout_height="420dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="15dp"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="30dp">
@@ -24,27 +22,54 @@
         <!-- forcem que la entrada sigui un correu electronic -->
 
         <!-- ENTREM EL NOM DEL JUGADOR -->
-        <EditText
-            android:id="@+id/correo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/correo"
-            android:inputType="textEmailAddress" />
 
-        <EditText
-            android:id="@+id/nombre"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/nombre" />
+            android:layout_height="wrap_content">
 
-        <!-- ENTREM EL PASSWORD -->
-        <EditText
-            android:id="@+id/pass"
+            <EditText
+                android:id="@+id/correo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/login_email"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/pass"
-            android:inputType="textPassword" />
-        <!-- forcem que la entrada sigui un password -->
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:background="@drawable/login_email"
+                android:layout_height="60dp"
+                android:padding="12dp"
+                android:hint="@string/nombre" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:passwordToggleEnabled="true">
+
+            <!-- ENTREM EL PASSWORD -->
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/login_email"
+                android:padding="12dp"
+                android:hint="@string/pass"
+                android:inputType="textPassword" />
+            <!-- forcem que la entrada sigui un password -->
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <!-- DATA ACTUAL -->
@@ -60,11 +85,58 @@
         <!-- BOTO DE ENTRAR -->
         <Button
             android:id="@+id/Registrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/re_btn"
             android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="20dp"
             android:text="@string/Registrar" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="500dp"
+        android:layout_height="385dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="-63dp"
+        android:layout_marginEnd="-101dp"
+        android:layout_marginBottom="409dp"
+        app:srcCompat="@drawable/imagentres" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="77dp"
+        android:layout_height="73dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="302dp"
+        android:layout_marginBottom="433dp"
+        app:srcCompat="@drawable/pokemonsiete" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="58dp"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="352dp"
+        android:layout_marginBottom="534dp"
+        app:srcCompat="@drawable/pokemonsiete" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="49dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="351dp"
+        android:layout_marginBottom="632dp"
+        app:srcCompat="@drawable/pokemonsiete" />
 
 
 </RelativeLayout>

@@ -9,6 +9,16 @@
 
 
     <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="614dp"
+        app:srcCompat="@drawable/pokemonsiete" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="319dp"
         android:layout_height="310dp"
@@ -129,23 +139,23 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="63dp"
-        android:layout_height="75dp"
+        android:layout_width="97dp"
+        android:layout_height="89dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="403dp"
-        app:srcCompat="@drawable/image" />
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="407dp"
+        app:srcCompat="@drawable/pokemonsiete" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="63dp"
-        android:layout_height="75dp"
+        android:layout_width="61dp"
+        android:layout_height="53dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="502dp"
-        app:srcCompat="@drawable/image" />
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="528dp"
+        app:srcCompat="@drawable/pokemonsiete" />
 
 
 </RelativeLayout>
