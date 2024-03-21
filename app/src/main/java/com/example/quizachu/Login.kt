@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -33,6 +34,7 @@ class Login : AppCompatActivity() {
     lateinit var db: FirebaseDatabase
     lateinit var googleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 123 // Asigna el valor que desees
+    lateinit var obrirRegistre: TextView
 
 
 
@@ -46,8 +48,12 @@ class Login : AppCompatActivity() {
         passLogin =findViewById<EditText>(R.id.passLogin)
         BtnLogin =findViewById<Button>(R.id.BtnLogin)
         BtnGoogle =findViewById<Button>(R.id.googleButton)
+        obrirRegistre =findViewById<TextView>(R.id.obrirRegistre)
 
 
+        obrirRegistre.setOnClickListener(){
+            tancarLogin()
+        }
 
         BtnLogin.setOnClickListener(){
             //Abans de fer el registre validem les dades
@@ -66,6 +72,8 @@ class Login : AppCompatActivity() {
                 LogindeJugador(email, passw)
             }
         }
+
+
 
 
         //Instanciem el firebaseAuth
@@ -103,8 +111,6 @@ class Login : AppCompatActivity() {
             Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
         }
     }
-
-
 
     private fun firebaseAuth(idToken: String?) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
@@ -152,6 +158,15 @@ class Login : AppCompatActivity() {
     fun updateUI(user:FirebaseUser?)
     {
         val intent= Intent(this, Menu::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+
+    private fun tancarLogin() {
+        auth.signOut() //tanca la sessió
+        //va a la pantalla inicial
+        val intent= Intent(this, Registre::class.java)
         startActivity(intent)
         finish()
     }

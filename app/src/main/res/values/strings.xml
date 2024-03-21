@@ -13,7 +13,7 @@
 
     <string name="correoLogin">Entra el teu email</string>  <!-- Correo  -->
     <string name="passLogin">Entra la teva contrasenya</string> <!-- Contraseña -->
-    <string name="BtnLogin">ENTRAR</string> <!-- Boton de entrada -->
+    <string name="BtnLogin">Iniciar sesión</string> <!-- Boton de entrada -->
 
     <string name="TancarSessio">Tancar Sessió</string>
 
