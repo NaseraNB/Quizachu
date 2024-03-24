@@ -13,7 +13,9 @@
 
     <string name="correoLogin">Entra el teu email</string>  <!-- Correo  -->
     <string name="passLogin">Entra la teva contrasenya</string> <!-- Contraseña -->
+    <string name="cambiaPassword">¿Heu oblidat la vostra contrasenya?</string>
     <string name="BtnLogin">Iniciar sesión</string> <!-- Boton de entrada -->
+    <string name="obrirRegistre">Registrar-se</string>
 
     <string name="TancarSessio">Tancar Sessió</string>
 

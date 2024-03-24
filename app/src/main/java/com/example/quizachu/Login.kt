@@ -35,6 +35,7 @@ class Login : AppCompatActivity() {
     lateinit var googleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 123 // Asigna el valor que desees
     lateinit var obrirRegistre: TextView
+    lateinit var  cambiaPassword: TextView
 
 
 
@@ -49,10 +50,17 @@ class Login : AppCompatActivity() {
         BtnLogin =findViewById<Button>(R.id.BtnLogin)
         BtnGoogle =findViewById<Button>(R.id.googleButton)
         obrirRegistre =findViewById<TextView>(R.id.obrirRegistre)
+        cambiaPassword =findViewById<TextView>(R.id.cambiaPassword)
 
 
         obrirRegistre.setOnClickListener(){
             tancarLogin()
+        }
+
+        cambiaPassword.setOnClickListener {
+            val intent = Intent(this@Login, OblidatContrasenya::class.java)
+            startActivity(intent)
+            finish()
         }
 
         BtnLogin.setOnClickListener(){
@@ -72,8 +80,6 @@ class Login : AppCompatActivity() {
                 LogindeJugador(email, passw)
             }
         }
-
-
 
 
         //Instanciem el firebaseAuth
