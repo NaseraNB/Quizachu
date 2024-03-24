@@ -32,7 +32,7 @@ class MainSplash : AppCompatActivity() {
         Glide.with(this)
             .asGif() // Indica a Glide que se trata de un GIF
             .load(R.drawable.pokemon_spl)
-            .override(1350, 1100) // Ajusta la resolución del GIF según las dimensiones de tu ImageView
+            .override(1000, 500) // Ajusta la resolución del GIF según las dimensiones de tu ImageView
             .centerCrop()
             .into(logo)
 

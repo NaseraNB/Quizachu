@@ -22,6 +22,7 @@
     <string name="uid"> -- </string>
     <string name="correo_"> -- </string>
     <string name="nom"> -- </string>
+    <string name="canviarImatge">Canviar imatge</string>
     <string name="MenuTxt">MENÚ</string>
     <string name="jugarBtn">Jugar</string>
     <string name="PuntuacionsBtn">Puntuacions</string>

@@ -73,10 +73,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pokemonsiete" />
 
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="220dp"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
         android:paddingLeft="20dp"
@@ -87,7 +88,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.076">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -144,13 +145,12 @@
             android:textSize="16dp" />
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="396dp"
         android:text="Don't have an account?"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -165,12 +165,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:text="Register now"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -186,10 +187,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <Button
         android:id="@+id/BtnLogin"
@@ -204,10 +205,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/googleButton"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

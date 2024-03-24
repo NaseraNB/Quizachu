@@ -50,10 +50,7 @@ class Menu : AppCompatActivity() {
         correo =findViewById(R.id.correo)
         nom =findViewById(R.id.nom)
 
-        tancarSessio.setTypeface(tf)
-        CreditsBtn.setTypeface(tf)
-        PuntuacionsBtn.setTypeface(tf)
-        jugarBtn.setTypeface(tf)
+
         consulta()
 
         tancarSessio.setOnClickListener(){
