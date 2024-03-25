@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".Nivell_1">
 
+    <!-- Botón para el nivel -->
+
+    <!-- Puntuación del usuario -->
+
+    <Button
+        android:id="@+id/boton_nivel1"
+        android:layout_width="267dp"
+        android:layout_height="59dp"
+        android:onClick="iniciarNivel1"
+        android:text="Boton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462" />
+
+
+    <TextView
+        android:id="@+id/puntuacio"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/poppinsuno"
+        android:gravity="center"
+        android:text="@string/puntuacio"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/boton_nivel1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

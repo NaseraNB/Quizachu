@@ -108,22 +108,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_nivell1" />
 
+    <!-- Botón Nivel 2 -->
+
     <!-- Botón Nivel 3 -->
+
     <Button
         android:id="@+id/btn_nivell3"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/btn_maindos"
         android:fontFamily="@font/textodo"
         android:text="@string/Nivell_tres"
         android:textColor="@android:color/white"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_nivell2"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_nivell2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
