@@ -30,6 +30,13 @@
     <string name="PuntuacionsBtn">Puntuacions</string>
     <string name="CreditsBtn">Crèdits</string>
 
+
+    <string name="SeleccionaUnNivell">Selecciona un nivell</string>
+    <string name="Nivell_uno">Nivell 1</string>
+    <string name="Nivell_dos">Nivell 2</string>
+    <string name="Nivell_tres">Nivell 3</string>
+
+
     <string name="prefs_file">https://quizachu-default-rtdb.europe-west1.firebasedatabase.app</string>
 
 </resources>

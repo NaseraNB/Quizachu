@@ -65,6 +65,9 @@ class Menu : AppCompatActivity() {
         }
         jugarBtn.setOnClickListener(){
             Toast.makeText(this,"JUGAR", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, seleccio_De_Nivells::class.java)
+            startActivity(intent)
+            finish()
         }
 
         auth= FirebaseAuth.getInstance()

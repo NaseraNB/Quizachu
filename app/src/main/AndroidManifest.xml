@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Quizachu"
         tools:targetApi="31">
         <activity
+            android:name=".Nivell_3"
+            android:exported="false" />
+        <activity
+            android:name=".Nivell_2"
+            android:exported="false" />
+        <activity
+            android:name=".Nivell_1"
+            android:exported="false" />
+        <activity
             android:name=".seleccio_De_Nivells"
             android:exported="false" />
         <activity
