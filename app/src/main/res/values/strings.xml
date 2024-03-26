@@ -36,6 +36,21 @@
     <string name="Nivell_dos">Nivell 2</string>
     <string name="Nivell_tres">Nivell 3</string>
 
+    <!-- strings PrimerNivell -->
+    <string name="buttonRespuestaCorrecta">Respuesta correcta</string>
+    <string name="puntuacioTxt">0</string>
+    <string name="tiempoNivell1">0</string>
+    <string name="nomUser"> -- </string>
+    <string name="NivellActual"> -- </string>
+
+    <!-- fi del joc -->
+    <string name="fiDelJoc">Fi del joc</string>
+    <string name="TotalDePuntuacio">Total de puntuació</string>
+    <string name="NombrePuntacico"> -- </string>
+    <string name="Seleccio_Nivells">Selecció del nivells</string>
+    <string name="jugarDeNou">Jugar de nou</string>
+    <string name="Puntatges">Puntatges</string>
+
 
     <string name="prefs_file">https://quizachu-default-rtdb.europe-west1.firebasedatabase.app</string>
 

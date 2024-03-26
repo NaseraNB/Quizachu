@@ -88,6 +88,7 @@ class Registre : AppCompatActivity() {
             var passString: String = pass.getText().toString()
             var nombreString: String = nombre.getText().toString()
             var fechaString: String= fecha.getText().toString()
+            var nivell: String = "1"
 
             //AQUI GUARDA EL CONTINGUT A LA BASE DE DADES
             // Utilitza un HashMap
@@ -98,6 +99,8 @@ class Registre : AppCompatActivity() {
             dadesJugador.put ("Nom",nombreString)
             dadesJugador.put ("Data",fechaString)
             dadesJugador.put ("Puntuacio",puntuacio)
+            dadesJugador.put ("Nivell", nivell)
+
 
             // Creem un punter a la base de dades i li donem un nom
             var database: FirebaseDatabase = FirebaseDatabase.getInstance("https://quizachu-default-rtdb.europe-west1.firebasedatabase.app")
