@@ -32,6 +32,8 @@ class Menu : AppCompatActivity() {
     lateinit var uid: TextView
     lateinit var correo: TextView
     lateinit var nom: TextView
+    lateinit var edat: TextView
+    lateinit var poblacio: TextView
 
     private var nivell ="1"
 
@@ -51,6 +53,9 @@ class Menu : AppCompatActivity() {
         uid =findViewById(R.id.uid)
         correo =findViewById(R.id.correo)
         nom =findViewById(R.id.nom)
+
+        edat =findViewById(R.id.edatMenu)
+        poblacio =findViewById(R.id.poblacioMenu)
 
 
         consulta()
@@ -142,6 +147,8 @@ class Menu : AppCompatActivity() {
                             uid.setText(ds.child("Uid").getValue().toString())
                             correo.setText(ds.child("Email").getValue().toString())
                             nom.setText(ds.child("Nom").getValue().toString())
+                            edat.setText(ds.child("Edat").getValue().toString())
+                            poblacio.setText(ds.child("Població").getValue().toString())
                             nivell = ds.child("Nivell").getValue().toString()
                         }
                         if (!trobat)

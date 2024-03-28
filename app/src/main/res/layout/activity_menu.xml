@@ -32,6 +32,7 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/pokemonsiete" />
 
+
     <TextView
         android:id="@+id/miPuntuaciotxt"
         android:layout_width="116dp"
@@ -40,7 +41,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/poppinsuno"
         android:gravity="center"
         android:text="@string/miPuntuaciotxt"
@@ -57,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="4dp"
         android:fontFamily="@font/poppinsuno"
         android:gravity="center"
@@ -68,31 +69,32 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
 
+    <!-- UID -->
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="400dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/puntuacio">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imagenUser"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:src="@drawable/l"
             app:shapeAppearanceOverlay="@style/radius" />
 
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/textuid"
-        android:layout_width="40dp"
+        android:layout_width="65dp"
         android:layout_height="31dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -104,28 +106,26 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/uid"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.052" />
-
+        app:layout_constraintVertical_bias="0.025" />
     <TextView
         android:id="@+id/uid"
         android:layout_width="322dp"
         android:layout_height="31dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:text="@string/uid"
         android:textColor="#ffffff"
-        android:textSize="16dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
-
+    <!-- Email -->
     <TextView
         android:id="@+id/textemail"
         android:layout_width="64dp"
@@ -133,7 +133,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="8dp"
         android:gravity="center"
         android:text="Email:"
         android:textColor="#ffffff"
@@ -143,22 +143,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textuid"
         app:layout_constraintVertical_bias="0.019" />
-
     <TextView
         android:id="@+id/correo"
-        android:layout_width="322dp"
+        android:layout_width="317dp"
         android:layout_height="31dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="@string/correo"
         android:textColor="#ffffff"
-        android:textSize="16dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/uid" />
 
-
+    <!-- Nom -->
     <TextView
         android:id="@+id/textNom"
         android:layout_width="64dp"
@@ -173,24 +172,30 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/nom"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textemail"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.025" />
 
+
+    <!-- Canviar imatge -->
+
+    <!-- Puntacions -->
     <TextView
         android:id="@+id/nom"
         android:layout_width="322dp"
         android:layout_height="31dp"
+        android:layout_marginTop="10dp"
         android:text="@string/nom"
         android:textColor="#ffffff"
-        android:textSize="16dp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/correo"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintTop_toBottomOf="@+id/correo" />
+
+    <!-- Credits -->
 
     <Button
         android:id="@+id/canviarImatge"
@@ -199,13 +204,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="660dp"
+        android:layout_marginTop="652dp"
         android:background="@drawable/btn_play_pass"
         android:text="@string/canviarImatge"
         android:textColor="#ffffff"
         android:textSize="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
@@ -216,13 +221,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/btn_play_pass"
         android:text="@string/PuntuacionsBtn"
         android:textColor="#ffffff"
         android:textSize="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/jugarBtn" />
 
@@ -244,7 +249,7 @@
         app:layout_constraintTop_toBottomOf="@+id/canviarImatge"
         app:layout_constraintVertical_bias="0.283" />
 
-
+    <!-- Tancar Sessio -->
     <Button
         android:id="@+id/tancarSessio"
         android:layout_width="161dp"
@@ -263,6 +268,7 @@
         app:layout_constraintTop_toBottomOf="@+id/PuntuacionsBtn"
         app:layout_constraintVertical_bias="0.242" />
 
+    <!-- Play -->
 
 
     <Button
@@ -272,12 +278,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="116dp"
         android:background="@drawable/btn_play_pass"
         android:text="@string/jugarBtn"
         android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/nom" />
 
@@ -332,7 +339,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="0.629"
+        app:layout_constraintVertical_bias="0.745"
         app:srcCompat="@drawable/pokemonsiete" />
 
     <ImageView
@@ -344,20 +351,82 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="0.679"
+        app:layout_constraintVertical_bias="0.745"
         app:srcCompat="@drawable/pokemonsiete" />
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="151dp"
-        android:layout_height="161dp"
+        android:layout_width="114dp"
+        android:layout_height="124dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.913"
+        app:layout_constraintVertical_bias="0.938"
         app:srcCompat="@drawable/po_user_removebg_preview" />
+
+    <TextView
+        android:id="@+id/edattext"
+        android:layout_width="64dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:text="Edat:"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/edatMenu"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNom"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/edatMenu"
+        android:layout_width="322dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/edat"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nom" />
+
+    <TextView
+        android:id="@+id/poblaciótext"
+        android:layout_width="100dp"
+        android:layout_height="31dp"
+        android:gravity="center"
+        android:text="Població:"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/poblacioMenu"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edattext"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <TextView
+        android:id="@+id/poblacioMenu"
+        android:layout_width="285dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/poblacio"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edatMenu"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
