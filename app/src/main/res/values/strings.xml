@@ -57,6 +57,11 @@
     <string name="jugarDeNou">Jugar de nou</string>
     <string name="Puntatges">Puntatges</string>
 
+    <!-- Lista de jugadores -->
+    <string name="nomJugador">Nom</string>
+    <string name="puntacicoJugador">Puntatge</string>
+    <string name="emailJugador">Email</string>
+
 
     <string name="prefs_file">https://quizachu-default-rtdb.europe-west1.firebasedatabase.app</string>
 

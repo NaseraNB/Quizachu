@@ -116,7 +116,9 @@ class Menu : AppCompatActivity() {
             Toast.makeText(this,"Credits", Toast.LENGTH_SHORT).show()
         }
         PuntuacionsBtn.setOnClickListener(){
-            Toast.makeText(this,"Puntuacions", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, RecyclerView::class.java)
+            startActivity(intent)
+            finish()
         }
         jugarBtn.setOnClickListener(){
             //hem d'enviar el id, el nom i el contador, i el nivell
@@ -311,7 +313,7 @@ class Menu : AppCompatActivity() {
 
     private fun subirFoto(imagenUri: Uri?) {
         val rutaDeArchivo = "$ruta/$perfil${user?.uid}" // Concatenación del ID de usuario
-        val storageReference: StorageReference = referenciaDeAlmacenamamiento.child(ruta)
+        val storageReference: StorageReference = referenciaDeAlmacenamamiento.child(rutaDeArchivo)
         storageReference.putFile(imagenUri!!)
             .addOnSuccessListener { taskSnapshot ->
                 val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl

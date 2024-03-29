@@ -177,4 +177,11 @@ class Login : AppCompatActivity() {
         finish()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this@Login, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 }

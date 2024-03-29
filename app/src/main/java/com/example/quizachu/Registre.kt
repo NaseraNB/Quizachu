@@ -136,4 +136,10 @@ class Registre : AppCompatActivity() {
             Toast.makeText( this,"ERROR CREATE USER",Toast.LENGTH_SHORT).show()
         }
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this@Registre, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 }

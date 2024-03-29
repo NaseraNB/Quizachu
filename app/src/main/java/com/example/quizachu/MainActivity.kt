@@ -68,4 +68,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this@MainActivity, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 }
