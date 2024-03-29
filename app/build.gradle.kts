@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.quizachu"
-        minSdk = 24
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -57,7 +57,6 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // Google
-
     // Import the BoM for the Firebase platform
     implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
 
@@ -67,4 +66,14 @@ dependencies {
 
     // Also add the dependency for the Google Play services library and specify its version
     implementation("com.google.android.gms:play-services-auth:21.0.0")
+
+    //picasso
+    implementation("com.squareup.picasso:picasso:2.71828")
+
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+
+    // Add the dependency for the Cloud Storage library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-storage")
 }

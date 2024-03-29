@@ -103,11 +103,13 @@ class Registre : AppCompatActivity() {
             dadesJugador.put ("Email",correoString)
             dadesJugador.put ("Password",passString)
             dadesJugador.put ("Nom",nombreString)
+            dadesJugador.put ("Edat",edatString)
+            dadesJugador.put ("Població", poblacioString)
+            dadesJugador.put ("Imatge","")
             dadesJugador.put ("Data",fechaString)
             dadesJugador.put ("Puntuacio",puntuacio)
             dadesJugador.put ("Nivell", nivell)
-            dadesJugador.put ("Edat",edatString)
-            dadesJugador.put ("Població", poblacioString)
+
 
 
             // Creem un punter a la base de dades i li donem un nom

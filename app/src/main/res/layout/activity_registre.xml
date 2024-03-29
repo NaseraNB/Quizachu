@@ -29,66 +29,14 @@
         app:layout_constraintGuide_percent="0.0" />
 
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="376dp"
-        android:layout_height="273dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="108dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:srcCompat="@drawable/imagentres" />
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="91dp"
-        android:layout_height="68dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.228"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imageView21"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="74dp"
-        android:layout_height="57dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imageView22"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView22"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.252"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:srcCompat="@drawable/pokemonsiete" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="560dp"
+        android:layout_height="700dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="4dp"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="30dp"
@@ -96,10 +44,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
         app:layout_constraintVertical_bias="1.0">
 
         <!-- Dades que heu d'introduir l'usuari -->
+
+        <!-- Imagen -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/nombreImagen"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:shapeAppearanceOverlay="@style/radius" />
 
         <!-- Correu -->
         <com.google.android.material.textfield.TextInputLayout

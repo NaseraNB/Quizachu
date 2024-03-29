@@ -87,7 +87,7 @@
             android:id="@+id/imagenUser"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:src="@drawable/l"
+            android:src="@drawable/imagen_user_pordefecto"
             app:shapeAppearanceOverlay="@style/radius" />
 
     </LinearLayout>
@@ -195,8 +195,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/correo" />
 
-    <!-- Credits -->
-
+    <!-- Canviar Imatge -->
     <Button
         android:id="@+id/canviarImatge"
         android:layout_width="161dp"
@@ -214,6 +213,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
+    <!-- Puntuacions -->
     <Button
         android:id="@+id/PuntuacionsBtn"
         android:layout_width="161dp"
@@ -231,6 +231,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/jugarBtn" />
 
+    <!-- Credits -->
     <Button
         android:id="@+id/CreditsBtn"
         android:layout_width="161dp"
@@ -268,9 +269,7 @@
         app:layout_constraintTop_toBottomOf="@+id/PuntuacionsBtn"
         app:layout_constraintVertical_bias="0.242" />
 
-    <!-- Play -->
-
-
+    <!-- Jugar -->
     <Button
         android:id="@+id/jugarBtn"
         android:layout_width="355dp"
