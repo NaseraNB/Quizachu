@@ -61,7 +61,8 @@
     <string name="nomJugador">Nom</string>
     <string name="puntacicoJugador">Puntatge</string>
     <string name="emailJugador">Email</string>
-
+    <string name="edadJugador">Edad</string>
+    <string name="poblacionJugador">Poblacion</string>
 
     <string name="prefs_file">https://quizachu-default-rtdb.europe-west1.firebasedatabase.app</string>
 

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Quizachu"
         tools:targetApi="31">
         <activity
+            android:name=".DetallesJugadorActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecyclerView"
             android:exported="false" />
         <activity

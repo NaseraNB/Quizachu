@@ -1,6 +1,6 @@
 package com.example.quizachu
 
-import JugadoresAdapter
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,7 +25,7 @@ class RecyclerView : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerViewPok)
         recyclerView.layoutManager = LinearLayoutManager(this)
         jugadoresList = mutableListOf()
-        adapter = JugadoresAdapter(jugadoresList)
+        adapter = JugadoresAdapter(this, jugadoresList)
         recyclerView.adapter = adapter
 
         database = FirebaseDatabase.getInstance("https://quizachu-default-rtdb.europe-west1.firebasedatabase.app").getReference("DATA BASE JUGADORS")
@@ -44,5 +44,12 @@ class RecyclerView : AppCompatActivity() {
                 // Manejar el error de lectura de la base de datos aquí
             }
         })
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this@RecyclerView, Menu::class.java)
+        startActivity(intent)
+        finish()
     }
 }
