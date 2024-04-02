@@ -52,6 +52,9 @@ class MainActivity : AppCompatActivity() {
             // Inicia la MainActivity
             startActivity(intent)
         }
+
+
+
     }
 
     // Aquest mètode s'executarà quan s'obri el menu
@@ -67,7 +70,6 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
-
     override fun onBackPressed() {
         super.onBackPressed()
         val intent = Intent(this@MainActivity, MainActivity::class.java)
