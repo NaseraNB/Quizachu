@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 
 class MainSplash : AppCompatActivity() {
     // Constante que representa la duración de la pantalla de presentación en milisegundos
-    val DURACION: Long = 6000;
+    val DURACION: Long = 8000;
     var mediaPlayer: MediaPlayer? = null // Declaració de MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +21,25 @@ class MainSplash : AppCompatActivity() {
         // Oculta la barra de acción
         supportActionBar?.hide()
 
+
+        // Nos permite añadir un gif
+        //this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        //val logo = findViewById<ImageView>(R.id.logoImage)
+        //Glide.with(this).load(R.drawable.pokemon).override(2100, 4100).centerCrop().into(logo)
+
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        val logo = findViewById<ImageView>(R.id.logoImage)
+        Glide.with(this)
+            .asGif() // Indica a Glide que se trata de un GIF
+            .load(R.drawable.pokemon_spl)
+            .override(1000, 500) // Ajusta la resolución del GIF según las dimensiones de tu ImageView
+            .centerCrop()
+            .into(logo)
+
+
+
         // Configuració del MediaPlayer amb el fitxer d'àudio
-        mediaPlayer = MediaPlayer.create(this, R.raw.sonido)
+        mediaPlayer = MediaPlayer.create(this, R.raw.splashmusic)
 
         // Reproduir àudio
         mediaPlayer?.start()

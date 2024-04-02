@@ -5,29 +5,36 @@
     <string name="botoLogin">Login</string> <!-- Boton de login -->
     <string name="botoRegistre">Registre</string> <!-- Boton de registro -->
 
+    <!-- Login -->
     <string name="correo">E-mail</string> <!-- Correo  -->
     <string name="nombre">Nom</string> <!-- Nombre -->
     <string name="pass">Password</string> <!-- Contraseña -->
     <string name="fecha">Data</string> <!-- Fecha -->
     <string name="Registrar">REGISTRAR</string> <!-- Registro -->
 
-    <string name="correoLogin">E-mail</string>  <!-- Correo  -->
-    <string name="passLogin">Password</string> <!-- Contraseña -->
-    <string name="BtnLogin">ENTRAR</string> <!-- Boton de entrada -->
+    <!-- Registre -->
+    <string name="edatEt">Edat</string>
+    <string name="poblacioEt">Població</string>
+    <string name="correoLogin">Entra el teu email</string>  <!-- Correo  -->
+    <string name="passLogin">Entra la teva contrasenya</string> <!-- Contraseña -->
+    <string name="cambiaPassword">¿Heu oblidat la vostra contrasenya?</string>
+    <string name="BtnLogin">Iniciar sesión</string> <!-- Boton de entrada -->
+    <string name="obrirRegistre">Registrar-se</string>
 
+    <!-- Menu -->
     <string name="TancarSessio">Tancar Sessió</string>
-
     <string name="miPuntuaciotxt">Puntuació</string>
     <string name="puntuacio"> -- </string>
     <string name="uid"> -- </string>
     <string name="correo_"> -- </string>
     <string name="nom"> -- </string>
+    <string name="edat"> -- </string>
+    <string name="poblacio"> -- </string>
+    <string name="canviarImatge">Canviar imatge</string>
     <string name="MenuTxt">MENÚ</string>
     <string name="jugarBtn">Jugar</string>
     <string name="PuntuacionsBtn">Puntuacions</string>
     <string name="CreditsBtn">Crèdits</string>
-
-
     <!--Game variables-->
     <string name="imgDesc">Pokémon image</string>
     <string name="btSortir">Sortir</string>
@@ -75,5 +82,34 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+  
+    <!-- Nivells -->
+    <string name="SeleccionaUnNivell">Selecciona un nivell</string>
+    <string name="Nivell_uno">Nivell 1</string>
+    <string name="Nivell_dos">Nivell 2</string>
+    <string name="Nivell_tres">Nivell 3</string>
 
+    <!-- strings PrimerNivell -->
+    <string name="buttonRespuestaCorrecta">Respuesta correcta</string>
+    <string name="puntuacioTxt">0</string>
+    <string name="tiempoNivell1">0</string>
+    <string name="nomUser"> -- </string>
+    <string name="NivellActual"> -- </string>
+
+    <!-- fi del joc -->
+    <string name="fiDelJoc">Fi del joc</string>
+    <string name="TotalDePuntuacio">Total de puntuació</string>
+    <string name="NombrePuntacico"> -- </string>
+    <string name="Seleccio_Nivells">Selecció del nivells</string>
+    <string name="jugarDeNou">Jugar de nou</string>
+    <string name="Puntatges">Puntatges</string>
+
+    <!-- Lista de jugadores -->
+    <string name="nomJugador">Nom</string>
+    <string name="puntacicoJugador">Puntatge</string>
+    <string name="emailJugador">Email</string>
+    <string name="edadJugador">Edad</string>
+    <string name="poblacionJugador">Poblacion</string>
+
+    <string name="prefs_file">https://quizachu-default-rtdb.europe-west1.firebasedatabase.app</string>
 </resources>

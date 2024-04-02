@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Cambiamos selector por -->
+<!-- Cambiamos selector por shape -->
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Possem tipus de forma -->
+    <!-- Possem tipus shape és forma -->
 
     <!-- Escollin el tipus de color, groc -->
+    <solid android:color="#0997bf"/>
+
+    <!-- també posarem un radi radi -->
+    <corners android:radius="50dp" />
 
 
-</selector>
+</shape>

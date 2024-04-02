@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -27,6 +29,37 @@
             android:exported="false" />
         <activity
             android:name=".GameScreen"
+            android:name=".DetallesJugadorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerView"
+            android:exported="false" />
+        <activity
+            android:name=".Adaptador"
+            android:exported="false" />
+        <activity
+            android:name=".Jugadors"
+            android:exported="false" />
+        <activity
+            android:name=".Puntuacions"
+            android:exported="false" />
+        <activity
+            android:name=".FiDelJoc"
+            android:exported="false" />
+        <activity
+            android:name=".Nivell_3"
+            android:exported="false" />
+        <activity
+            android:name=".Nivell_2"
+            android:exported="false" />
+        <activity
+            android:name=".Nivell_1"
+            android:exported="false" />
+        <activity
+            android:name=".seleccio_De_Nivells"
+            android:exported="false" />
+        <activity
+            android:name=".OblidatContrasenya"
             android:exported="false" />
         <activity
             android:name=".Login"
