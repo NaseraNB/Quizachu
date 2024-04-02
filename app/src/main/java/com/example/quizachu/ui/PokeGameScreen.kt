@@ -191,7 +191,7 @@ class PokeGameScreen : AppCompatActivity() {
     private fun endRound() {
         // Mostrar la puntuación y permitir al usuario volver a la pantalla de niveles
         showScoreScreen()
-        currentLevel++
+
         if (currentLevel > NUM_LEVELS) {
             // Fin del juego, mostrar resultados finales o reiniciar
         }
