@@ -16,7 +16,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import com.example.quizachu.ui.PokeGameScreen
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -46,7 +45,6 @@ class Menu : AppCompatActivity() {
     lateinit var PuntuacionsBtn: Button
     lateinit var jugarBtn: Button
     lateinit var canviarImatge: Button
-  
     //reference serà el punter que ens envia a la base de dades de jugadors
     lateinit var reference: DatabaseReference
 
@@ -71,10 +69,12 @@ class Menu : AppCompatActivity() {
     private var CODIGO_PARA_ABRIR_CAMARA = 104
 
 
+
     // MATRICES
     private lateinit var permisosDeAlmacenamiento: Array<String>
     private lateinit var imagen_uri: Uri
     private var perfil: String = "Imatge"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -107,6 +107,7 @@ class Menu : AppCompatActivity() {
         tancarSessio.setOnClickListener(){
             tancalaSessio()
         }
+
         canviarImatge.setOnClickListener(){
             Toast.makeText(this,"EDITAR", Toast.LENGTH_SHORT).show()
             actualizarFotoPerfil()
@@ -133,7 +134,9 @@ class Menu : AppCompatActivity() {
                 intent.putExtra("PUNTUACIO",puntuacios)
                 intent.putExtra("NIVELL",nivells)
                 startActivity(intent)
-                finish()ç
+                finish()
+
+
         }
 
         auth= FirebaseAuth.getInstance()

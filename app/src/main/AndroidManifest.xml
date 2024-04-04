@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -17,18 +17,6 @@
         android:theme="@style/Theme.Quizachu"
         tools:targetApi="31">
         <activity
-            android:name=".ui.LevelmenuScreen"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SummarySplash"
-            android:exported="false"
-            android:label="@string/title_activity_summary_splash"
-            android:theme="@style/Theme.Quizachu" />
-        <activity
-            android:name=".ui.PokeGameScreen"
-            android:exported="false" />
-        <activity
-            android:name=".GameScreen"
             android:name=".DetallesJugadorActivity"
             android:exported="false" />
         <activity
