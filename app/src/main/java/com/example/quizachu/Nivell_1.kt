@@ -138,6 +138,12 @@ class Nivell_1 : AppCompatActivity() {
             finish()
         }
 
+        Puntatges.setOnClickListener(){
+            val intent = Intent(this@Nivell_1, RecyclerView::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 
     private fun guardarResultats(puntos: String) {
