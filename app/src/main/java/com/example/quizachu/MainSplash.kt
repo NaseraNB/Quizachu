@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 
 class MainSplash : AppCompatActivity() {
     // Constante que representa la duración de la pantalla de presentación en milisegundos
-    val DURACION: Long = 8000;
+    val DURACION: Long = 3000;
     var mediaPlayer: MediaPlayer? = null // Declaració de MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +39,7 @@ class MainSplash : AppCompatActivity() {
 
 
         // Configuració del MediaPlayer amb el fitxer d'àudio
-        mediaPlayer = MediaPlayer.create(this, R.raw.splashmusic)
+        mediaPlayer = MediaPlayer.create(this, R.raw.splashmusicpokemon)
 
         // Reproduir àudio
         mediaPlayer?.start()

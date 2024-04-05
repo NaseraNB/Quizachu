@@ -7,66 +7,6 @@
     android:background="@drawable/menu_fondo_color"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="83dp"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="615dp"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="327dp"
-        android:layout_marginBottom="649dp"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="405dp"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="330dp"
-        android:layout_marginBottom="248dp"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="178dp"
-        android:layout_marginBottom="384dp"
-        app:srcCompat="@drawable/pokemonsiete" />
-
     <Button
         android:id="@+id/botoLogin"
         android:layout_width="323dp"
@@ -78,7 +18,7 @@
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="37dp"
         android:background="@drawable/btn_main"
-        android:textColor="#371384"
+        android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold"
         android:text="@string/botoLogin" />
@@ -100,60 +40,60 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="182dp"
-        android:layout_height="196dp"
-        app:srcCompat="@drawable/pokemoncinco" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="290dp"
-        android:layout_height="228dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-27dp"
-        android:layout_marginBottom="466dp"
-        app:srcCompat="@drawable/pokemoncinco" />
-
-    <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView9"
         android:layout_width="match_parent"
-        android:layout_height="337dp"
-        android:layout_alignParentEnd="true"
+        android:layout_height="407dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="117dp"
-        android:layout_marginBottom="308dp"
-        app:srcCompat="@drawable/pokemoncinco" />
+        android:layout_marginBottom="329dp"
+        app:srcCompat="@drawable/menuselect" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="199dp"
-        android:layout_height="204dp"
+        android:id="@+id/imageView10"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="231dp"
-        app:srcCompat="@drawable/pokemoncuatro" />
+        android:layout_marginStart="195dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="241dp"
+        app:srcCompat="@drawable/imageestrella" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/imageView11"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="342dp"
-        android:layout_marginBottom="488dp"
-        app:srcCompat="@drawable/pokemonsiete" />
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="296dp"
+        android:layout_marginBottom="703dp"
+        app:srcCompat="@drawable/imageestrella" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/imageView12"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="132dp"
-        android:layout_marginBottom="656dp"
-        app:srcCompat="@drawable/pokemonsiete" />
+        android:layout_marginStart="292dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="336dp"
+        app:srcCompat="@drawable/imageestrella" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="323dp"
+        app:srcCompat="@drawable/imageestrella" />
 
 
 </RelativeLayout>

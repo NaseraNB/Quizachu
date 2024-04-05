@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Quizachu</string>
 
-    <!-- Variables -->
+    <!-- Menú de login i registre -->
     <string name="botoLogin">Login</string> <!-- Boton de login -->
     <string name="botoRegistre">Registre</string> <!-- Boton de registro -->
 
@@ -11,15 +11,23 @@
     <string name="pass">Password</string> <!-- Contraseña -->
     <string name="fecha">Data</string> <!-- Fecha -->
     <string name="Registrar">REGISTRAR</string> <!-- Registro -->
+    <string name="cambiaPassword">¿Heu oblidat la vostra contrasenya?</string>
+    <string name="obrirRegistre">Registrar-se</string>
+    <string name="tensCompte">Tens un compte?</string>
+    <string name="titulLogin">LOGIN</string>
+
+    <!-- Contraseña -->
+    <string name="introdueixContraseña">Introdueix el teu correu</string>
+    <string name="recuperarContraseña">per recuperar la contrasenya</string>
+    <string name="recuperarBtn">Recuperar</string>
 
     <!-- Registre -->
+    <string name="titulRegistre">REGISTRE</string>
     <string name="edatEt">Edat</string>
     <string name="poblacioEt">Població</string>
     <string name="correoLogin">Entra el teu email</string>  <!-- Correo  -->
     <string name="passLogin">Entra la teva contrasenya</string> <!-- Contraseña -->
-    <string name="cambiaPassword">¿Heu oblidat la vostra contrasenya?</string>
     <string name="BtnLogin">Iniciar sesión</string> <!-- Boton de entrada -->
-    <string name="obrirRegistre">Registrar-se</string>
 
     <!-- Menu -->
     <string name="TancarSessio">Tancar Sessió</string>

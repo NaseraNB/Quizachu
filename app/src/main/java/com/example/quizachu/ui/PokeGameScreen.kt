@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.example.quizachu.Menu
 import com.example.quizachu.R
 import com.example.quizachu.RecyclerView
 import com.example.quizachu.models.PokeInfoViewModel
@@ -63,7 +64,6 @@ class PokeGameScreen : AppCompatActivity() {
         NIVELL = intent?.getString("NIVELL").toString()
 
         currentLevel = NIVELL.toInt()
-        score = PUNTUACIO.toInt()
 
         imageView = findViewById(R.id.imagePokemon)
         buttons = listOf(
@@ -220,14 +220,7 @@ class PokeGameScreen : AppCompatActivity() {
         guardarPuntuacion(score.toString()) // Aquí se guarda la puntuación
 
         jugarDeNou.setOnClickListener {
-            score = 0
-            endGameDialog.dismiss()
-            initUI() // Reiniciar el juego
-            if (numQuestionsAsked == MAX_QUESTIONS_PER_LEVEL) {
-                currentLevel++
-                if (currentLevel > NUM_LEVELS) currentLevel = NUM_LEVELS
-            }
-            actualizarPuntajes() // Actualizar puntajes en todas las actividades
+            val intent = Intent(this@PokeGameScreen, Menu::class.java)
         }
 
         Seleccio_Nivells.setOnClickListener {
@@ -254,7 +247,7 @@ class PokeGameScreen : AppCompatActivity() {
             jugadors.child(uidString).child("Puntuacio").get().addOnSuccessListener { dataSnapshot ->
                 val puntuacionActual = dataSnapshot.value.toString().toInt()
                 // Sumar la puntuación actual del nivel al total almacenado en la base de datos
-                val nuevaPuntuacionTotal = puntuacionActual + puntuacion.toInt()
+                val nuevaPuntuacionTotal = puntuacionActual + score
 
                 // Guardar la nueva puntuación total en la base de datos
                 val datosJugador: HashMap<String, Any> = HashMap()
@@ -289,5 +282,13 @@ class PokeGameScreen : AppCompatActivity() {
                 Toast.makeText(this@PokeGameScreen, "Error al obtener el puntaje", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val intent = Intent(this@PokeGameScreen, seleccio_De_Nivells::class.java)
+        startActivity(intent)
+        finish()
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#0C0B11"
     tools:context=".Registre">
 
     <androidx.constraintlayout.widget.Guideline
@@ -29,11 +29,10 @@
         app:layout_constraintGuide_percent="0.0" />
 
 
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="600dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -52,8 +51,8 @@
         <!-- Imagen -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/nombreImagen"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:shapeAppearanceOverlay="@style/radius" />
 
         <!-- Correu -->
@@ -149,12 +148,52 @@
         <!-- BOTO DE ENTRAR -->
         <Button
             android:id="@+id/Registrar"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/re_btn"
+            android:background="@drawable/google_"
             android:text="@string/Registrar"
             android:textColor="#000000"
             android:textSize="20dp" />
+
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="354dp"
+        android:layout_height="237dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/registre_" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="184dp"
+        android:layout_height="55dp"
+        android:fontFamily="@font/textodo"
+        android:text="@string/titulRegistre"
+        android:textColor="#DAF50C"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="45dp"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:layout_constraintVertical_bias="0.064"
+        app:srcCompat="@drawable/imageestrella" />
 </androidx.constraintlayout.widget.ConstraintLayout>
