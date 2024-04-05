@@ -1,80 +1,78 @@
 package com.example.quizachu
 
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.example.quizachu.ui.PokeGameScreen
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class seleccio_De_Nivells : AppCompatActivity() {
     lateinit var nivell1: Button
     lateinit var nivell2: Button
     lateinit var nivell3: Button
-    private var NOM: String =""
-    private var PUNTUACIO: String=""
-    private var UID: String=""
-    private var NIVELL: String=""
+    private var NOM: String = ""
+    private var PUNTUACIO: String = ""
+    private var UID: String = ""
+    private var NIVELL: String = "0" // Establecer el nivel predeterminado en 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seleccio_de_nivells)
 
-        //ara recuperarem els valors
-        var intent:Bundle? = getIntent().extras
-        UID = intent?.get("UID").toString()
-        NOM = intent?.get("NOM").toString()
-        PUNTUACIO = intent?.get("PUNTUACIO").toString()
-        NIVELL = intent?.get("NIVELL").toString()
+        // Recuperar valores del Intent
+        val intent: Bundle? = getIntent().extras
+        UID = intent?.getString("UID").toString()
+        NOM = intent?.getString("NOM").toString()
+        PUNTUACIO = intent?.getString("PUNTUACIO").toString()
+        NIVELL = intent?.getString("NIVELL").toString()
 
-        nivell1 =findViewById<Button>(R.id.btn_nivell1)
-        nivell2 =findViewById<Button>(R.id.btn_nivell2)
-        nivell3 =findViewById<Button>(R.id.btn_nivell3)
+        // Inicializar botones
+        nivell1 = findViewById<Button>(R.id.btn_nivell1)
+        nivell2 = findViewById<Button>(R.id.btn_nivell2)
+        nivell3 = findViewById<Button>(R.id.btn_nivell3)
 
-
-        nivell1.setOnClickListener(){
-            val intent = Intent(this, PokeGameScreen::class.java)
-            startActivity(intent)
-            finish()
-
-            if (NIVELL =="1") {
-                Toast.makeText(this,"NIVELL 1",Toast.LENGTH_LONG).show()
-            }
-
-            intent.putExtra("UID", UID)
-            intent.putExtra("NOM", NOM)
-            intent.putExtra("PUNTUACIO", PUNTUACIO)
-            intent.putExtra("NIVELL", NIVELL)
-            startActivity(intent)
-            finish()
+        // Deshabilitar botones según el nivel actual
+        nivell1.setOnClickListener {
+            NIVELL = "1"
+            iniciarJuego()
+            nivell2.isEnabled = true
         }
 
-        nivell2.setOnClickListener(){
-            val intent = Intent(this, Nivell_2::class.java)
-            startActivity(intent)
-            finish()
+        nivell2.setOnClickListener {
+            if (NIVELL.toInt() >= 1) {
+                NIVELL = "2"
+                iniciarJuego()
+            } else {
+                Toast.makeText(this, "Completa el nivel 1 primero", Toast.LENGTH_SHORT).show()
+            }
+            nivell3.isEnabled = true
+        }
 
-            if (NIVELL =="2") {
-                Toast.makeText(this,"NIVELL 2",Toast.LENGTH_LONG).show()
+        nivell3.setOnClickListener {
+            if (NIVELL.toInt() >= 2) {
+                NIVELL = "3"
+                iniciarJuego()
+            } else {
+                Toast.makeText(this, "Completa el nivel 2 primero", Toast.LENGTH_SHORT).show()
             }
         }
 
-        nivell3.setOnClickListener(){
-            val intent = Intent(this, Nivell_3::class.java)
-            startActivity(intent)
-            finish()
-
-            if (NIVELL =="3") {
-                Toast.makeText(this,"NIVELL 1",Toast.LENGTH_LONG).show()
-            }
-        }
+        // Deshabilitar botones según el nivel actual
+        nivell2.isEnabled = NIVELL.toInt() >= 1
+        nivell3.isEnabled = NIVELL.toInt() >= 2
     }
 
-    // En cas que l'usuari vulgui tornar cap enrere se li obrirà la finestra del menú del jugador.
+    private fun iniciarJuego() {
+        val intent = Intent(this, PokeGameScreen::class.java)
+        intent.putExtra("UID", UID)
+        intent.putExtra("NOM", NOM)
+        intent.putExtra("PUNTUACIO", PUNTUACIO)
+        intent.putExtra("NIVELL", NIVELL)
+        startActivity(intent)
+        finish()
+    }
+
     override fun onBackPressed() {
         super.onBackPressed()
 
@@ -82,5 +80,4 @@ class seleccio_De_Nivells : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
 }

@@ -55,7 +55,7 @@ class Menu : AppCompatActivity() {
     lateinit var edat: TextView
     lateinit var poblacio: TextView
 
-    private var nivell ="1"
+    private var nivell ="0"
 
     lateinit var imatgePerfil: ShapeableImageView
 
@@ -206,6 +206,8 @@ class Menu : AppCompatActivity() {
             }
         })
     }
+
+
 
     private fun actualizarFotoPerfil(){
         perfil = "Imatge"

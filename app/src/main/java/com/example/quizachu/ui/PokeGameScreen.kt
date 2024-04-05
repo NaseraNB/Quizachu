@@ -63,6 +63,7 @@ class PokeGameScreen : AppCompatActivity() {
         NIVELL = intent?.getString("NIVELL").toString()
 
         currentLevel = NIVELL.toInt()
+        score = PUNTUACIO.toInt()
 
         imageView = findViewById(R.id.imagePokemon)
         buttons = listOf(
@@ -222,14 +223,22 @@ class PokeGameScreen : AppCompatActivity() {
             score = 0
             endGameDialog.dismiss()
             initUI() // Reiniciar el juego
+            if (numQuestionsAsked == MAX_QUESTIONS_PER_LEVEL) {
+                currentLevel++
+                if (currentLevel > NUM_LEVELS) currentLevel = NUM_LEVELS
+            }
             actualizarPuntajes() // Actualizar puntajes en todas las actividades
         }
 
         Seleccio_Nivells.setOnClickListener {
             val intent = Intent(this@PokeGameScreen, seleccio_De_Nivells::class.java)
+            intent.putExtra("UID", UID)
+            intent.putExtra("NOM", NOM)
+            intent.putExtra("PUNTUACIO", PUNTUACIO)
+            intent.putExtra("NIVELL", NIVELL)
             startActivity(intent)
-            finish()
         }
+
 
         Puntatges.setOnClickListener {
             val intent = Intent(this@PokeGameScreen, RecyclerView::class.java)
@@ -241,20 +250,30 @@ class PokeGameScreen : AppCompatActivity() {
     private fun guardarPuntuacion(puntuacion: String) {
         val uidString: String? = UID // Obtener el UID del usuario
         if (uidString != null) {
-            val datosJugador: HashMap<String, Any> = HashMap()
-            datosJugador["Puntuacio"] = puntuacion // Guardar la puntuación en los datos del jugador
+            // Obtener la puntuación actual almacenada en la base de datos
+            jugadors.child(uidString).child("Puntuacio").get().addOnSuccessListener { dataSnapshot ->
+                val puntuacionActual = dataSnapshot.value.toString().toInt()
+                // Sumar la puntuación actual del nivel al total almacenado en la base de datos
+                val nuevaPuntuacionTotal = puntuacionActual + puntuacion.toInt()
 
-            // Actualizar la puntuación en la base de datos
-            jugadors.child(uidString).updateChildren(datosJugador)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this@PokeGameScreen, "Puntuación guardada", Toast.LENGTH_SHORT).show()
-                    } else {
-                        Toast.makeText(this@PokeGameScreen, "Error al guardar la puntuación", Toast.LENGTH_SHORT).show()
+                // Guardar la nueva puntuación total en la base de datos
+                val datosJugador: HashMap<String, Any> = HashMap()
+                datosJugador["Puntuacio"] = nuevaPuntuacionTotal.toString()
+                datosJugador["Nivell"] = NIVELL // Actualizar el nivel actual del usuario
+
+                // Actualizar la puntuación y el nivel en la base de datos
+                jugadors.child(uidString).updateChildren(datosJugador)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this@PokeGameScreen, "Puntuación y nivel guardados", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(this@PokeGameScreen, "Error al guardar la puntuación y el nivel", Toast.LENGTH_SHORT).show()
+                        }
                     }
-                }
+            }
         }
     }
+
 
     private fun actualizarPuntajes() {
         val uidString: String? = UID // Obtener el UID del usuario
