@@ -43,6 +43,11 @@
     <string name="jugarBtn">Jugar</string>
     <string name="PuntuacionsBtn">Puntuacions</string>
     <string name="CreditsBtn">Crèdits</string>
+    <string name="UID">UID:</string>
+    <string name="Email">Email:</string>
+    <string name="Nom">Nom:</string>
+    <string name="Edat">Edat:</string>
+    <string name="Població">Població:</string>
 
     <!-- Nivells -->
     <string name="SeleccionaUnNivell">Selecciona un nivell</string>

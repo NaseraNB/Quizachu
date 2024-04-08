@@ -7,32 +7,6 @@
     android:background="@drawable/menu_fondo_color"
     tools:context=".Menu">
 
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="40dp"
-        android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="40dp"
-        android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-
     <TextView
         android:id="@+id/miPuntuaciotxt"
         android:layout_width="116dp"
@@ -100,7 +74,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:text="UID:"
+        android:text="@string/UID"
         android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -135,7 +109,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="8dp"
         android:gravity="center"
-        android:text="Email:"
+        android:text="@string/Email"
         android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -166,7 +140,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:text="Nom:"
+        android:text="@string/Nom"
         android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -176,9 +150,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textemail"
         app:layout_constraintVertical_bias="0.025" />
-
-
-    <!-- Canviar imatge -->
 
     <!-- Puntacions -->
     <TextView
@@ -204,9 +175,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="652dp"
-        android:background="@drawable/btn_play_pass"
+        android:background="@drawable/google_"
         android:text="@string/canviarImatge"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="0.59"
@@ -222,9 +193,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="24dp"
-        android:background="@drawable/btn_play_pass"
+        android:background="@drawable/google_"
         android:text="@string/PuntuacionsBtn"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintHorizontal_bias="0.34"
@@ -239,9 +210,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="8dp"
-        android:background="@drawable/btn_play_pass"
+        android:background="@drawable/google_"
         android:text="@string/CreditsBtn"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
@@ -258,9 +229,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="12dp"
-        android:background="@drawable/btn_play_pass"
+        android:background="@drawable/google_"
         android:text="@string/TancarSessio"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -278,9 +249,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="116dp"
-        android:background="@drawable/btn_play_pass"
+        android:background="@drawable/google_"
         android:text="@string/jugarBtn"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
@@ -329,40 +300,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.02" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="40dp"
-        android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="0.745"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="40dp"
-        android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="0.745"
-        app:srcCompat="@drawable/pokemonsiete" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="114dp"
-        android:layout_height="124dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938"
-        app:srcCompat="@drawable/po_user_removebg_preview" />
 
     <TextView
         android:id="@+id/edattext"
@@ -370,7 +307,7 @@
         android:layout_height="31dp"
         android:layout_marginEnd="4dp"
         android:gravity="center"
-        android:text="Edat:"
+        android:text="@string/Edat"
         android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -400,7 +337,7 @@
         android:layout_width="100dp"
         android:layout_height="31dp"
         android:gravity="center"
-        android:text="Població:"
+        android:text="@string/Població"
         android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -426,6 +363,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edatMenu"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="68dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="776dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/imageestrella" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

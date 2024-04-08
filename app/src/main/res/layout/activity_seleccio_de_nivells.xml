@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/seleccion_color_fondo"
+    android:background="@drawable/menu_fondo_color"
     tools:context=".seleccio_De_Nivells">
 
     <androidx.constraintlayout.widget.Guideline
@@ -36,71 +36,59 @@
         app:layout_constraintGuide_percent="0.997264" />
 
     <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="187dp"
-        android:layout_height="187dp"
+        android:id="@+id/imageView24"
+        android:layout_width="475dp"
+        android:layout_height="326dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
-        app:layout_constraintHorizontal_bias="0.304"
-        app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toTopOf="@+id/guideline15"
-        app:layout_constraintVertical_bias="0.06"
-        app:srcCompat="@drawable/selecci__tres_removebg_preview" />
-
-    <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="192dp"
-        android:layout_height="195dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline15"
-        app:layout_constraintVertical_bias="0.052"
-        app:srcCompat="@drawable/selecci__dos_removebg_preview" />
+        app:layout_constraintVertical_bias="0.053"
+        app:srcCompat="@drawable/selecci__img" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
         android:fontFamily="@font/textodo"
         android:text="@string/SeleccionaUnNivell"
         android:textAlignment="center"
-        android:textColor="#422876"
-        android:textSize="35dp"
+        android:textColor="#ffffff"
+        android:textSize="45dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline15"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView24"
+        app:layout_constraintVertical_bias="0.134" />
 
     <Button
         android:id="@+id/btn_nivell1"
         android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="56dp"
-        android:fontFamily="@font/textodo"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/btn_maindos"
+        android:fontFamily="@font/textodo"
         android:text="@string/Nivell_uno"
-        android:textColor="@android:color/white"
-        android:textSize="25dp"
+        android:textColor="#EAF04D"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/btn_nivell2"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="44dp"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:background="@drawable/btn_maindos"
         android:fontFamily="@font/textodo"
         android:text="@string/Nivell_dos"
-        android:textColor="@android:color/white"
+        android:textColor="#EAF04D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,13 +97,13 @@
     <Button
         android:id="@+id/btn_nivell3"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="44dp"
         android:background="@drawable/btn_maindos"
         android:fontFamily="@font/textodo"
         android:text="@string/Nivell_tres"
-        android:textColor="@android:color/white"
-        android:textSize="25dp"
+        android:textColor="#EAF04D"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,15 +112,15 @@
 
     <ImageView
         android:id="@+id/fondomontse"
-        android:layout_width="78dp"
-        android:layout_height="73dp"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954"
-        app:srcCompat="@drawable/pokemonsiete" />
+        app:layout_constraintVertical_bias="0.376"
+        app:srcCompat="@drawable/imageestrella" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
