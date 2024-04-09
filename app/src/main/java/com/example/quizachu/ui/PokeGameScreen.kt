@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -119,6 +120,21 @@ class PokeGameScreen : AppCompatActivity() {
         }
     }
 
+    private fun showPokemonDetailsDialog(pokemon: Pokemon) {
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.showpokemon)
+
+        val pokemonNameTextView = dialog.findViewById<TextView>(R.id.pokemonNameTextView)
+
+        pokemonNameTextView.text = pokemon.name
+        dialog.show()
+
+        // Cerrar el diálogo después de un breve tiempo
+        Handler().postDelayed({
+            dialog.dismiss()
+        }, 2000) // Tiempo en milisegundos
+    }
+
     private fun loadPokemonImage() {
         Picasso.get().load(selectedPokemon.sprites.frontDefault).into(imageView, object : Callback {
             override fun onSuccess() {
@@ -196,7 +212,8 @@ class PokeGameScreen : AppCompatActivity() {
             score++
             Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(this, "Incorrect! The Pokémon is $pokeCorrect", Toast.LENGTH_SHORT).show()
+            showPokemonDetailsDialog(selectedPokemon)
+            //Toast.makeText(this, "Incorrect! The Pokémon is $pokeCorrect", Toast.LENGTH_SHORT).show()
         }
 
         numQuestionsAsked++
