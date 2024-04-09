@@ -67,8 +67,8 @@
     <string name="TotalDePuntuacio">Total de puntuació</string>
     <string name="NombrePuntacico"> -- </string>
     <string name="Seleccio_Nivells">Selecció del nivells</string>
-    <string name="jugarDeNou">Jugar de nou</string>
-    <string name="Puntatges">Puntatges</string>
+    <string name="jugarDeNou">Menu</string>
+    <string name="Puntatges">Puntuacions</string>
 
     <!-- Lista de jugadores -->
     <string name="nomJugador">Nom</string>

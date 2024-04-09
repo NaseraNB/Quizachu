@@ -34,6 +34,7 @@ class PokeGameScreen : AppCompatActivity() {
     private lateinit var viewModel: PokeInfoViewModel
     private lateinit var imageView: ImageView
     private lateinit var buttons: List<Button>
+    private lateinit var button_exit: Button
     private var numQuestionsAsked = 0
     private var gameJob: Job? = null
     private lateinit var pokemonList: List<Pokemon>
@@ -71,8 +72,14 @@ class PokeGameScreen : AppCompatActivity() {
             findViewById(R.id.btnPokemon2),
             findViewById(R.id.btnPokemon3)
         )
+        button_exit = findViewById(R.id.sortidaJoc)
+
         viewModel = ViewModelProvider(this)[PokeInfoViewModel::class.java]
         initUI()
+
+        button_exit.setOnClickListener {
+            showEndGameDialog() // Muestra el diálogo de fin de juego al hacer clic en el botón de salida
+        }
     }
 
     private fun initUI() {
@@ -210,7 +217,7 @@ class PokeGameScreen : AppCompatActivity() {
         val TotalDePuntuacio = endGameDialog.findViewById<TextView>(R.id.TotalDePuntuacio)
         val NombrePuntacico = endGameDialog.findViewById<TextView>(R.id.NombrePuntacico)
         val Seleccio_Nivells = endGameDialog.findViewById<Button>(R.id.Seleccio_Nivells)
-        val jugarDeNou = endGameDialog.findViewById<Button>(R.id.jugarDeNou)
+        val menu = endGameDialog.findViewById<Button>(R.id.jugarDeNou)
         val Puntatges = endGameDialog.findViewById<Button>(R.id.Puntatges)
 
         NombrePuntacico.text = score.toString()
@@ -219,8 +226,10 @@ class PokeGameScreen : AppCompatActivity() {
 
         guardarPuntuacion(score.toString()) // Aquí se guarda la puntuación
 
-        jugarDeNou.setOnClickListener {
+        menu.setOnClickListener {
             val intent = Intent(this@PokeGameScreen, Menu::class.java)
+            startActivity(intent)
+            finish()
         }
 
         Seleccio_Nivells.setOnClickListener {
@@ -286,9 +295,7 @@ class PokeGameScreen : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-
-        val intent = Intent(this@PokeGameScreen, seleccio_De_Nivells::class.java)
-        startActivity(intent)
-        finish()
+        showEndGameDialog()
     }
+
 }

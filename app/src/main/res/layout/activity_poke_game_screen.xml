@@ -5,57 +5,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:padding="16dp">
 
     <!-- Botón para salir -->
-    <Button
-        android:id="@+id/btSortir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/btSortir"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- ImageView para la imagen del Pokémon -->
 
     <!-- Botones para los nombres de los Pokémon -->
+
+    <Button
+        android:id="@+id/sortidaJoc"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/google_"
+        android:text="@string/btSortir"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <ImageView
         android:id="@+id/imagePokemon"
         android:layout_width="341dp"
         android:layout_height="296dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btSortir"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="380dp"
+        android:background="@drawable/game_dos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePokemon" />
+
     <Button
         android:id="@+id/btnPokemon1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
         android:text="@string/pokeBt"
+        android:background="@drawable/game_"
+        android:fontFamily="@font/textodo"
+        android:textSize="25dp"
+        android:textColor="#EAF04D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagePokemon" />
 
     <Button
         android:id="@+id/btnPokemon2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
         android:text="@string/pokeBt"
+        android:background="@drawable/game_"
+        android:fontFamily="@font/textodo"
+        android:textSize="25dp"
+        android:textColor="#EAF04D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPokemon1" />
 
     <Button
         android:id="@+id/btnPokemon3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
         android:text="@string/pokeBt"
+        android:background="@drawable/game_"
+        android:fontFamily="@font/textodo"
+        android:textSize="25dp"
+        android:textColor="#EAF04D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPokemon2" />
