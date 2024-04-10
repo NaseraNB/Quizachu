@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
+import android.media.AudioAttributes
 import android.os.Bundle
 import android.os.Handler
 import android.widget.Button
@@ -24,6 +25,8 @@ import com.squareup.picasso.Picasso
 import kotlinx.coroutines.*
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import android.media.AudioManager
+import android.media.SoundPool
 
 class PokeGameScreen : AppCompatActivity() {
     companion object {
@@ -52,9 +55,14 @@ class PokeGameScreen : AppCompatActivity() {
     lateinit var firebaseDatabase: FirebaseDatabase
     lateinit var jugadors: DatabaseReference
 
+    private lateinit var soundPool: SoundPool
+    private var soundId: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poke_game_screen)
+
+        initializeSoundPool()
 
         firebaseDatabase = FirebaseDatabase.getInstance()
         jugadors = firebaseDatabase.getReference("DATA BASE JUGADORS")
@@ -83,11 +91,34 @@ class PokeGameScreen : AppCompatActivity() {
         }
     }
 
+    private fun initializeSoundPool() {
+        soundPool = SoundPool.Builder()
+            .setMaxStreams(1)
+            .setAudioAttributes(
+                AudioAttributes.Builder()
+                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                    .setUsage(AudioAttributes.USAGE_GAME)
+                    .build()
+            )
+            .build()
+
+        soundId = soundPool.load(this, R.raw.sonidodeljuegogepokemon, 1)
+    }
+
     private fun initUI() {
         askQuestion()
+        playGameMusic()
+    }
+
+    private fun playGameMusic() {
+        // Reproducir la música
+        soundPool.play(soundId, 1.0f, 1.0f, 1, -1, 1.0f)
     }
 
     private fun askQuestion() {
+
+        stopGameMusic()
+
         viewModel.getPokemonListAndInfo()
         viewModel.pokemonInfo.observe(this) { newList ->
             if (newList.isNotEmpty()) {
@@ -95,6 +126,8 @@ class PokeGameScreen : AppCompatActivity() {
                 selectedPokemon = pokemonList.random()
                 loadPokemonImage()
                 updateButtonNames()
+
+                playGameMusic()
             }
         }
     }
@@ -226,7 +259,25 @@ class PokeGameScreen : AppCompatActivity() {
         showEndGameDialog()
     }
 
+    private fun pauseGameMusic() {
+        soundPool.autoPause()
+    }
+
+
+    private fun resumeGameMusic() {
+        soundPool.autoResume()
+    }
+
+    private fun stopGameMusic() {
+        soundPool.stop(soundId)
+    }
+
+
+
     private fun showEndGameDialog() {
+
+        pauseGameMusic()
+
         val endGameDialog = Dialog(this@PokeGameScreen)
         endGameDialog.setContentView(R.layout.activity_fi_del_joc)
 
@@ -263,6 +314,11 @@ class PokeGameScreen : AppCompatActivity() {
             val intent = Intent(this@PokeGameScreen, RecyclerView::class.java)
             startActivity(intent)
             finish()
+        }
+
+        // Reanudar la música después de cerrar el diálogo
+        endGameDialog.setOnDismissListener {
+            resumeGameMusic()
         }
     }
 

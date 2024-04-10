@@ -64,6 +64,7 @@ class seleccio_De_Nivells : AppCompatActivity() {
     }
 
     private fun iniciarJuego() {
+        // Iniciar la actividad del juego
         val intent = Intent(this, PokeGameScreen::class.java)
         intent.putExtra("UID", UID)
         intent.putExtra("NOM", NOM)
@@ -72,6 +73,9 @@ class seleccio_De_Nivells : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+
+
 
 
     override fun onBackPressed() {
