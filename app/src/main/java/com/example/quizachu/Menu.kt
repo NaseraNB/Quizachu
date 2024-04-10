@@ -1,7 +1,5 @@
 package com.example.quizachu
 
-
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -10,10 +8,8 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.provider.Settings
 import android.util.Log
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -30,10 +26,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.google.firebase.storage.UploadTask
 import com.squareup.picasso.Picasso
 import java.io.ByteArrayOutputStream
-import java.util.Objects
 
 class Menu : AppCompatActivity() {
 
@@ -114,7 +108,9 @@ class Menu : AppCompatActivity() {
         }
 
         CreditsBtn.setOnClickListener(){
-            Toast.makeText(this,"Credits", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, CreditsApp::class.java)
+            startActivity(intent)
+            finish()
         }
         PuntuacionsBtn.setOnClickListener(){
             val intent= Intent(this, RecyclerView::class.java)
@@ -364,6 +360,14 @@ class Menu : AppCompatActivity() {
             arrayOf(android.Manifest.permission.CAMERA),
             CAMERA_PERMISSION_REQUEST_CODE
         )
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val intent = Intent(this@Menu, Menu::class.java)
+        startActivity(intent)
+        finish()
     }
 
 

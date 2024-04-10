@@ -7,9 +7,9 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:backgroundTint="#9CFFA3"
+    android:backgroundTint="#325249"
     app:cardUseCompatPadding="true"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="50dp"
     android:elevation="2dp"
     app:contentPadding="10dp">
 
@@ -18,21 +18,24 @@
         android:layout_height="wrap_content"
         android:padding="10dp">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imatgeJugador"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            tools:background="@color/black"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:shapeAppearanceOverlay="@style/radius"
+            tools:background="@color/black" />
 
         <TextView
             android:id="@+id/nomJugador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="28dp"
-            android:textColor="@color/black"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
             android:textSize="20dp"
             app:layout_constraintStart_toEndOf="@+id/imatgeJugador"
             app:layout_constraintTop_toTopOf="parent"
@@ -42,13 +45,13 @@
             android:id="@+id/puntuacioJugador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="172dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/black"
-            android:layout_marginLeft="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/nomJugador"
             app:layout_constraintStart_toEndOf="@+id/imatgeJugador"
-            tools:text="Hola"/>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hola" />
 
         <TextView
             android:visibility="gone"
