@@ -31,7 +31,7 @@ class Registre : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registre)
 
-        // Busquem a R els elements als que apunten les variables
+        // Assigna els elements de l'interfície als objectes
         correo = findViewById<EditText>(R.id.correo)
         pass = findViewById<EditText>(R.id.pass)
         nombre = findViewById<EditText>(R.id.nombre)
@@ -39,10 +39,9 @@ class Registre : AppCompatActivity() {
         poblacio = findViewById<EditText>(R.id.poblacioEt)
         fecha = findViewById<TextView>(R.id.fecha)
         Registrar = findViewById<Button>(R.id.Registrar)
-        baseDeDades = FirebaseAuth.getInstance() //Instanciem el firebaseAuth
+        baseDeDades = FirebaseAuth.getInstance()
 
-        //carreguem la data al TextView
-        //Utilitzem calendar (hi ha moltes altres opcions)
+        // Obtenir la data actual i mostrar-la a la interfície d'usuari
         val date = Calendar.getInstance().time
         val formatter = SimpleDateFormat.getDateInstance() //or use getDateInstance()
         val formatedDate = formatter.format(date)
@@ -50,6 +49,7 @@ class Registre : AppCompatActivity() {
         //ara la mostrem al TextView
         fecha.setText(formatedDate)
 
+        // Defineix l'acció del botó de registre
         Registrar.setOnClickListener() {
             //Abans de fer el registre validem les dades
             var email: String = correo.getText().toString()
@@ -67,6 +67,7 @@ class Registre : AppCompatActivity() {
         }
     }
 
+    // Funció per registrar un nou jugador a Firebase Authentication
     fun RegistrarJugador(email:String, passw:String){
         baseDeDades.createUserWithEmailAndPassword(email, passw)
             .addOnCompleteListener(this) { task ->
@@ -82,10 +83,12 @@ class Registre : AppCompatActivity() {
             }
     }
 
+    // Actualitza la interfície d'usuari després del registre
     fun updateUI(user:FirebaseUser?){
         //hi ha un interrogant perquè podria ser null
         if (user!=null)
         {
+            // Recupera les dades del formulari
             var puntuacio: String = "0"
             var uidString: String = user.uid
             var correoString: String = correo.getText().toString()
@@ -96,8 +99,7 @@ class Registre : AppCompatActivity() {
             var edatString: String = edat.getText().toString()
             var poblacioString: String = poblacio.getText().toString()
 
-            //AQUI GUARDA EL CONTINGUT A LA BASE DE DADES
-            // Utilitza un HashMap
+            // Guarda les dades del jugador a Firebase Realtime Database
             var dadesJugador : HashMap<String,String> = HashMap<String, String>()
             dadesJugador.put ("Uid",uidString)
             dadesJugador.put ("Email",correoString)
@@ -111,8 +113,7 @@ class Registre : AppCompatActivity() {
             dadesJugador.put ("Nivell", nivell)
 
 
-
-            // Creem un punter a la base de dades i li donem un nom
+            // Accedeix a Firebase Realtime Database i guarda les dades del jugador
             var database: FirebaseDatabase = FirebaseDatabase.getInstance("https://quizachu-default-rtdb.europe-west1.firebasedatabase.app")
             var reference: DatabaseReference = database.getReference("DATA BASE JUGADORS")
                 if(reference!=null) {
@@ -120,7 +121,7 @@ class Registre : AppCompatActivity() {
                     Log.i("MYTAB", uidString)
                     Log.i("MYTAB", dadesJugador.toString())
 
-                    //crea un fill amb els valors de dadesJugador
+                    // Crea un fill amb les dades del jugador
                     reference.child(uidString).setValue(dadesJugador)
                     Toast.makeText(this, "USUARI BEN REGISTRAT", Toast.LENGTH_SHORT).show()
                     val intent= Intent(this, Menu::class.java)
@@ -136,6 +137,7 @@ class Registre : AppCompatActivity() {
             Toast.makeText( this,"ERROR CREATE USER",Toast.LENGTH_SHORT).show()
         }
     }
+    // Canvia d'activitat
     override fun onBackPressed() {
         super.onBackPressed()
         val intent = Intent(this@Registre, MainActivity::class.java)

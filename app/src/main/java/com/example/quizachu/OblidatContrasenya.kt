@@ -31,6 +31,7 @@ class OblidatContrasenya : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
     }
 
+    // Validar l'adreça de correu electrònic
     private fun validar() {
         val email = correoRecuperar.text.toString().trim()
 
@@ -42,6 +43,7 @@ class OblidatContrasenya : AppCompatActivity() {
         enviaCorreuElectronic(email)
     }
 
+    // Maneja la pressió del botó de retrocés per navegar a la pantalla de Login
     override fun onBackPressed() {
         super.onBackPressed()
 
@@ -50,6 +52,7 @@ class OblidatContrasenya : AppCompatActivity() {
         finish()
     }
 
+    // Envia un correu electrònic de restabliment de contrasenya
     private fun enviaCorreuElectronic(email: String) {
         val emailAddress = email
 

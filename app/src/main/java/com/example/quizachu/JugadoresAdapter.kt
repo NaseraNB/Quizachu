@@ -11,10 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.example.quizachu.R
 
+// JugadoresAdapter que extèn RecyclerView.Adapter<JugadoresAdapter.ViewHolder>
 class JugadoresAdapter(private val context: Context, private val jugadoresList: List<Jugadors>) :
     RecyclerView.Adapter<JugadoresAdapter.ViewHolder>() {
 
+    // Classe interna ViewHolder que extèn RecyclerView.ViewHolder
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        // Declaració dels elements de la interfície
         val imageView: ImageView = itemView.findViewById(R.id.imatgeJugador)
         val nombreTextView: TextView = itemView.findViewById(R.id.nomJugador)
         val puntuacionTextView: TextView = itemView.findViewById(R.id.puntuacioJugador)
@@ -23,10 +26,12 @@ class JugadoresAdapter(private val context: Context, private val jugadoresList: 
         val poblacionJugador: TextView = itemView.findViewById(R.id.poblacionJugador)
 
         init {
+            // Acció que s'executa quan es fa clic a un element del RecyclerView
             itemView.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     val jugador = jugadoresList[position]
+                    // Iniciar DetallesJugadorActivity i enviar dades mitjançant un Intent
                     val intent = Intent(itemView.context, DetallesJugadorActivity::class.java).apply {
                         putExtra("Imagen", jugador.Imatge)
                         putExtra("Nom", jugador.Nom)
@@ -41,13 +46,14 @@ class JugadoresAdapter(private val context: Context, private val jugadoresList: 
         }
     }
 
-
+    // Mètode onCreateViewHolder, crea una nova instància de ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.view_jugador, parent, false)
         return ViewHolder(view)
     }
 
+    // Mètode onBindViewHolder, vincula les dades amb els elements de la interfície
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val jugador = jugadoresList[position]
         holder.nombreTextView.text = jugador.Nom
@@ -56,15 +62,15 @@ class JugadoresAdapter(private val context: Context, private val jugadoresList: 
         holder.edadJugador.text = jugador.Edat
         holder.poblacionJugador.text = jugador.Població
 
-        // Cargar la imagen de perfil con Picasso
+        // Carrega la imatge del jugador amb Picasso, o una imatge per defecte si no hi ha imatge personalitzada
         if (jugador.Imatge.isNotEmpty()) {
             Picasso.get().load(jugador.Imatge).into(holder.imageView)
         } else {
-            // Si no hay una imagen personalizada, cargar la imagen por defecto
             Picasso.get().load(R.drawable.imagen_user_pordefecto).into(holder.imageView)
         }
     }
 
+    // Mètode getItemCount, retorna la quantitat d'elements a mostrar
     override fun getItemCount(): Int {
         return jugadoresList.size
     }

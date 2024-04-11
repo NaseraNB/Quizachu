@@ -14,25 +14,25 @@ class seleccio_De_Nivells : AppCompatActivity() {
     private var NOM: String = ""
     private var PUNTUACIO: String = ""
     private var UID: String = ""
-    private var NIVELL: String = "0" // Establecer el nivel predeterminado en 1
+    private var NIVELL: String = "0"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seleccio_de_nivells)
 
-        // Recuperar valores del Intent
+        // Recupera els valors de l'intent
         val intent: Bundle? = getIntent().extras
         UID = intent?.getString("UID").toString()
         NOM = intent?.getString("NOM").toString()
         PUNTUACIO = intent?.getString("PUNTUACIO").toString()
         NIVELL = intent?.getString("NIVELL").toString()
 
-        // Inicializar botones
+        // Inicialitza els botons
         nivell1 = findViewById<Button>(R.id.btn_nivell1)
         nivell2 = findViewById<Button>(R.id.btn_nivell2)
         nivell3 = findViewById<Button>(R.id.btn_nivell3)
 
-        // Deshabilitar botones según el nivel actual
+        // Deshabilita els botons segons el nivell actual
         nivell1.setOnClickListener {
             NIVELL = "1"
             iniciarJuego()
@@ -58,13 +58,13 @@ class seleccio_De_Nivells : AppCompatActivity() {
             }
         }
 
-        // Deshabilitar botones según el nivel actual
+        // Deshabilita els botons segons el nivell actual
         nivell2.isEnabled = NIVELL.toInt() >= 1
         nivell3.isEnabled = NIVELL.toInt() >= 2
     }
 
+    // Inicia l'activitat del joc
     private fun iniciarJuego() {
-        // Iniciar la actividad del juego
         val intent = Intent(this, PokeGameScreen::class.java)
         intent.putExtra("UID", UID)
         intent.putExtra("NOM", NOM)
@@ -75,12 +75,9 @@ class seleccio_De_Nivells : AppCompatActivity() {
     }
 
 
-
-
-
+    // Canviar d'activitat
     override fun onBackPressed() {
         super.onBackPressed()
-
         val intent = Intent(this@seleccio_De_Nivells, Menu::class.java)
         startActivity(intent)
         finish()

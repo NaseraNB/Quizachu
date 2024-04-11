@@ -31,7 +31,7 @@ import java.io.ByteArrayOutputStream
 
 class Menu : AppCompatActivity() {
 
-    //creem unes variables per comprovar ususari i authentificació
+    // Cream unes variables per comprovar usuari i autenticació
     lateinit var auth: FirebaseAuth
     var user: FirebaseUser? = null;
     lateinit var tancarSessio: Button
@@ -39,20 +39,15 @@ class Menu : AppCompatActivity() {
     lateinit var PuntuacionsBtn: Button
     lateinit var jugarBtn: Button
     lateinit var canviarImatge: Button
-    //reference serà el punter que ens envia a la base de dades de jugadors
     lateinit var reference: DatabaseReference
-
     lateinit var puntuacio: TextView
     lateinit var uid: TextView
     lateinit var correo: TextView
     lateinit var nom: TextView
     lateinit var edat: TextView
     lateinit var poblacio: TextView
-
     private var nivell ="0"
-
     lateinit var imatgePerfil: ShapeableImageView
-
     lateinit var referenciaDeAlmacenamamiento: StorageReference
     private var ruta: String = "FotosDePerfil/*"
 
@@ -61,8 +56,6 @@ class Menu : AppCompatActivity() {
     private var CODIGO_PARA_LA_SELECCION_DE_LA_IMAGEN = 300
     private var CAMERA_PERMISSION_REQUEST_CODE = 103
     private var CODIGO_PARA_ABRIR_CAMARA = 104
-
-
 
     // MATRICES
     private lateinit var permisosDeAlmacenamiento: Array<String>
@@ -98,6 +91,7 @@ class Menu : AppCompatActivity() {
 
         consulta()
 
+        // Botons amb les seves accions.
         tancarSessio.setOnClickListener(){
             tancalaSessio()
         }
@@ -146,6 +140,7 @@ class Menu : AppCompatActivity() {
         super.onStart()
     }
 
+    // Logejat
     private fun Usuarilogejat()
     {
         if (user !=null)
@@ -161,14 +156,15 @@ class Menu : AppCompatActivity() {
         }
     }
 
+    // Tancar sessió
     private fun tancalaSessio() {
-        auth.signOut() //tanca la sessió
-        //va a la pantalla inicial
+        auth.signOut()
         val intent= Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }
 
+    // Consultar la base de dades i obtenir les dades de la base
     private fun consulta() {
         var database: FirebaseDatabase = FirebaseDatabase.getInstance("https://quizachu-default-rtdb.europe-west1.firebasedatabase.app/")
         var bdreference: DatabaseReference = database.getReference("DATA BASE JUGADORS")
@@ -204,12 +200,13 @@ class Menu : AppCompatActivity() {
     }
 
 
-
+    // Actualitzar la imatge al firebase
     private fun actualizarFotoPerfil(){
         perfil = "Imatge"
         mostrarOpcionesSeleccionImagen()
     }
 
+    // Mostrar la imatge
     private fun mostrarOpcionesSeleccionImagen() {
         val opciones = arrayOf("Galería", "Cámara")
         val builder = AlertDialog.Builder(this)
@@ -240,6 +237,7 @@ class Menu : AppCompatActivity() {
     }
 
 
+    // Permisos de la galeria
 
     private fun solicitarPermisosAlmacenamiento() {
         val permisos = arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE, android.Manifest.permission.CAMERA)
@@ -252,7 +250,6 @@ class Menu : AppCompatActivity() {
         val resultadoCamara = ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
         return resultadoAlmacenamiento && resultadoCamara
     }
-
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -268,6 +265,7 @@ class Menu : AppCompatActivity() {
     }
 
 
+    // Triar una imatge de la galeria
     private fun elegirImagenDeGaleria() {
         val intentGaleria = Intent(Intent.ACTION_OPEN_DOCUMENT)
         intentGaleria.type = "image/*"
@@ -302,7 +300,7 @@ class Menu : AppCompatActivity() {
         }
     }
 
-
+    // Url de la imatge
     private fun getImageUri(inImage: Bitmap): Uri {
         val bytes = ByteArrayOutputStream()
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
@@ -310,6 +308,7 @@ class Menu : AppCompatActivity() {
         return Uri.parse(path)
     }
 
+    // Pujar la imatge al firebase
     private fun subirFoto(imagenUri: Uri?) {
         val rutaDeArchivo = "$ruta/$perfil${user?.uid}" // Concatenación del ID de usuario
         val storageReference: StorageReference = referenciaDeAlmacenamamiento.child(rutaDeArchivo)
@@ -338,6 +337,7 @@ class Menu : AppCompatActivity() {
             }
     }
 
+    // Obrir la càmera
     private fun abrirCamara() {
         val intentCamara = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         if (intentCamara.resolveActivity(packageManager) != null) {
@@ -347,7 +347,7 @@ class Menu : AppCompatActivity() {
         }
     }
 
-
+    // Permís de la càmera
     private fun checkCameraPermissions(): Boolean {
         return ContextCompat.checkSelfPermission(
             this, android.Manifest.permission.CAMERA
@@ -362,13 +362,11 @@ class Menu : AppCompatActivity() {
         )
     }
 
+    // Canvia d'activitat
     override fun onBackPressed() {
         super.onBackPressed()
-
         val intent = Intent(this@Menu, Menu::class.java)
         startActivity(intent)
         finish()
     }
-
-
 }

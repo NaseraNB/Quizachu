@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentLogo">
 
     <!-- TODO: Update blank fragment layout -->
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FragmentLogo">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/imageViewLogo"
             android:layout_width="wrap_content"
-            android:layout_height="301dp"
+            android:layout_height="250dp"
             android:layout_gravity="center"
             android:src="@drawable/logo_inscastellet" />
 
@@ -23,14 +23,10 @@
             android:id="@+id/textViewCycleName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:fontFamily="@font/textodo"
-            android:text="GCFGS Desenvolupament d’Aplicacions Multiplataforma ..."
+            android:layout_marginTop="13dp"
+            android:text="GCFGS Desenvolupament d’Aplicacions Multiplataforma"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="35dp" />
-
-    </FrameLayout>
-
-
+            android:textSize="22sp" />
+    </LinearLayout>
 </FrameLayout>

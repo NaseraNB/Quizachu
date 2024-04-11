@@ -1,6 +1,7 @@
 package com.example.quizachu
 import java.io.Serializable
 data class Jugadors (
+    // Propietats de la classe Jugadors
     var Uid: String = "",
     var Nom: String = "",
     var Puntuacio: String = "",
